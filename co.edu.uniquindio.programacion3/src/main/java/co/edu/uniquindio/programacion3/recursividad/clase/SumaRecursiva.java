@@ -1,4 +1,4 @@
-package co.edu.uniquindio.programacion3.recursividad;
+package co.edu.uniquindio.programacion3.recursividad.clase;
 
 public class SumaRecursiva {
     public static void main(String[] args) {
