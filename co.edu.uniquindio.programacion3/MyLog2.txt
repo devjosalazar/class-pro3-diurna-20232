@@ -1,0 +1,2 @@
+sep. 18, 2023 8:28:52 A. M. co.edu.uniquindio.programacion3.flujosDatos.EjemplosBasicos archivoRegistro
+GRAVE: Primer mensaje 1.1

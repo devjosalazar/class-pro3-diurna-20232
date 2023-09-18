@@ -1,0 +1,56 @@
+private static void funcionExcepciones() {
+		//bloque1
+		//bloque2
+		try {
+			//bloque3
+			//bloque4
+		}
+		catch (ArithmeticException e3) {
+			//bloque 15
+		}
+		catch (NumberFormatException e4) {
+			//bloque 16
+		}
+		catch (Exception e1) {
+			//bloque 5
+			//bloque6
+			try {
+				//bloque7
+				//bloque8
+			} catch (Exception e2) {
+				//bloque9
+				try {
+					//bloque10
+				} catch (Exception e) {
+					///bloque11
+				}
+				//bloque12
+			}
+			finally {
+				//bloque13
+		}
+		//bloque14
+		}		
+		
+		finally {
+			//bloque 17
+			//bloque 18
+		}
+		//bloque 19
+	}
+
+Sin excepciones
+1.2.3.4.17.18.19
+
+Excepción en el bloque 2
+1.2*.17.18
+
+Excepción en el bloque 5
+1.2.3.4*.5*.13.17.18
+
+Error por formato invalido en un operación de casteo de una cadena a un número en el bloque 3
+1.2.3*.16.17.18.19
+
+
+
+

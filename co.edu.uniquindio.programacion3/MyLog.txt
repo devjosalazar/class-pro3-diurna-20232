@@ -1,0 +1,6 @@
+sep. 18, 2023 8:25:46 A. M. co.edu.uniquindio.programacion3.flujosDatos.EjemplosBasicos archivoRegistro
+GRAVE: Primer mensaje 1.1
+sep. 18, 2023 8:25:46 A. M. co.edu.uniquindio.programacion3.flujosDatos.EjemplosBasicos archivoRegistro
+ADVERTENCIA: Segundo mensaje 2.1
+sep. 18, 2023 8:25:46 A. M. co.edu.uniquindio.programacion3.flujosDatos.EjemplosBasicos archivoRegistro
+GRAVE: Tercer mensaje 3.1

@@ -19,11 +19,26 @@ public class E_2_Recorrer {
 //		recorrerMatriz(matrizPalabras, i, j, listasPalabras);
 	}
 
+	private static void recorrerMatriz(int[][] matriz, int i, int j){
+		if(i <= matriz.length-1){
+			if(j <=matriz[i].length-1){
+				System.out.print(matriz[i][j]);
+				if(j == matriz[i].length-1)	{
+					i++;
+					j=0;
+					System.out.println();
+				}else{
+					j++;
+				}
+				recorrerMatriz(matriz, i, j);
+			}
+		}
+	}
+
 
 	private static void recorrerMatriz(String[][] matriz, int i, int j, ArrayList<String> listasPalabras){
 		if(i <= matriz.length-1){
 			if(j <=matriz[i].length-1){	
-				
 				String palabra = matriz[i][j];
 				if(verificarVocalesSeguidas(palabra) == true)
 					listasPalabras.add(palabra);
@@ -46,20 +61,4 @@ public class E_2_Recorrer {
 		return false;
 	}
 
-
-	private static void recorrerMatriz(int[][] matriz, int i, int j){
-		if(i <= matriz.length-1){
-			if(j <=matriz[i].length-1){	
-				System.out.print(matriz[i][j]);
-				if(j == matriz[i].length-1)	{
-					i++;
-					j=0;
-					System.out.println();
-				}else{
-					j++;
-				}
-				recorrerMatriz(matriz, i, j);
-			}
-		}
-	}
 }
