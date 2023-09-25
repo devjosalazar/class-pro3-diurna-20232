@@ -24,19 +24,16 @@ public class EjemplosBasicos {
 //		archivoPropiedades();
 
 		//Archivos de Registro
-		archivoRegistro();
+//		archivoRegistro();
 
 		//Manejo de carpetas (directorios)
 //		manejoCarpetas();
 
 		//Creaci�n de archivos de texto
-//		crearArchivo_V1();
-
-//		crearArchivo_V2_invocacionClasePersistencia();
+		crearArchivo_V2_invocacionClasePersistencia();
 	}
 
 	private static void archivoPropiedades() {
-
 		ResourceBundle resourceBundle;
 
 		resourceBundle = ResourceBundle.getBundle("MiRecurso",new Locale("en","US"));
@@ -45,21 +42,15 @@ public class EjemplosBasicos {
 		resourceBundle = ResourceBundle.getBundle("MiRecurso",new Locale("pt","BR"));
 		JOptionPane.showMessageDialog(null,resourceBundle.getString("saludoBienvenida"));
 
-		resourceBundle = ResourceBundle.getBundle("MiRecurso");
-		JOptionPane.showMessageDialog(null,resourceBundle.getString("idioma"));
-
-
 		resourceBundle = ResourceBundle.getBundle("MiRecurso", new Locale("",""));
 		JOptionPane.showMessageDialog(null,resourceBundle.getString("saludoBienvenida"));
-
-
 	}
 
 	private static void archivoRegistro() {
 		FileHandler archivo = null;
 		try {
 //			archivo = new FileHandler("MyLog.txt", true);
-			archivo = new FileHandler("src/main/resources/logs/MyLog.txt", false);
+			archivo = new FileHandler("co.edu.uniquindio.programacion3/src/main/resources/logs/MyLog.txt", false);
 
 			archivo.setFormatter(new SimpleFormatter());
 			LOGGER.addHandler(archivo);
@@ -82,7 +73,8 @@ public class EjemplosBasicos {
 			String salida, ruta;
 			File directorio;
 
-			ruta = "C:/td/directorioPrueba";
+//			ruta = "C:/td/directorioPrueba";
+			ruta = "/Users/fira_dev/td_per/ws";
 
 			directorio = new File(ruta);
 
@@ -97,47 +89,7 @@ public class EjemplosBasicos {
 
 		}
 
-
-		private static void crearArchivo_V1() {
-
-			FileWriter archivoSalida;
-			Formatter archivo = null;
-			String formato, nombre;
-
-			int edad, peso;
-			double altura;
-
-			formato = "El estudiante %s de edad %d y altura %2.2f es apto para jugar quien tiene un peso de %d\n";
-			nombre = "Juan Pablo Galvis";
-			edad = 255;
-			altura = 1.73;
-			peso = 50;
-
-			try {
-//			Construye un objeto FileWriter dado un nombre de archivo con 
-//			un valor booleano que indica si anexar o no los datos escritos.
-				archivoSalida = new FileWriter("C:/td/directorioPrueba/ejemplo.txt");
-				archivo = new Formatter(archivoSalida);
-
-//			archivo = new Formatter("C:/td/directorioPrueba/ejemplo.txt");
-
-				archivo.format(formato, nombre,edad,altura,peso);
-
-				archivo.flush();
-
-				JOptionPane.showMessageDialog(null, "El archivo se creo correctamente");
-
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} finally {
-				archivo.close();
-			}
-		}
-
-
 		private static void crearArchivo_V2_invocacionClasePersistencia() {
-
 			String rutaArchivo,formato, nombre;
 			int edad, peso;
 			double altura;
@@ -148,30 +100,21 @@ public class EjemplosBasicos {
 			listaDatosSalida.add("Linea 3");
 			listaDatosSalida.add("Linea 4");
 
-
-			rutaArchivo = "C:/td/directorioPrueba/ejemplo2.txt";
+//			rutaArchivo = "C:/td/directorioPrueba/ejemplo2.txt";
+			rutaArchivo = "/Users/fira_dev/td_per/ws/td/directorioPrueba/ejemplo2.txt";
 
 			formato = "El estudiante %s de edad %d y altura %2.2f es apto para jugar %d\n";
 			nombre = "Juan Pablo Galvis";
 			edad = 21;
 			altura = 1.73;
 			peso = 50;
-
 			try {
-
-
 				Persistencia.almacenarDatos(rutaArchivo, formato, nombre,edad,altura,peso);
 //			Persistencia.escribirArchivo(rutaArchivo, listaDatosSalida, false);
 				JOptionPane.showMessageDialog(null, "El archivo se creo correctamente");
-
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-
 		}
-
-
-
-
 }

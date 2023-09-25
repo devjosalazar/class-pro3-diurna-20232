@@ -16,8 +16,8 @@ public class EscrituraLectuarArchivos {
 //		fileReaderYWriter_V2();
 //		fileReaderYWriter_V3();
 		
-		bufferReaderYWriter_V1();
-//		bufferReaderYWriter_V2();
+//		bufferReaderYWriter_V1();
+		bufferReaderYWriter_V2();
 		
 	}
 
@@ -25,7 +25,8 @@ public class EscrituraLectuarArchivos {
 
 		try{
 			//Abro stream, crea el fichero si no existe
-			FileWriter fw=new FileWriter("C://td//directorioPrueba//fichero1.txt",false);
+//			FileWriter fw=new FileWriter("C://td//directorioPrueba//fichero1.txt",false);
+			FileWriter fw=new FileWriter("/Users/fira_dev/td_per/ws/td/directorioPrueba/fichero1.txt",false);
 			
 			//Escribimos en el fichero un String y un caracter 97 (a)
 			fw.write("Esto es una prueb"+"\n");
@@ -35,7 +36,8 @@ public class EscrituraLectuarArchivos {
 			fw.close(); 
 			
 			//Abro el stream, el fichero debe existir
-			FileReader fr=new FileReader("C://td//directorioPrueba//fichero1.txt");
+//			FileReader fr=new FileReader("C://td//directorioPrueba//fichero1.txt");
+			FileReader fr=new FileReader("/Users/fira_dev/td_per/ws/td/directorioPrueba/fichero1.txt");
 			
 			//Leemos el fichero y lo mostramos por pantalla
 			int valor=fr.read();
@@ -61,8 +63,10 @@ public class EscrituraLectuarArchivos {
 
 		try{
 			//Creo los objetos, abro streams
-			FileWriter fw=new FileWriter("C://td//directorioPrueba//fichero2.txt");
-			FileReader fr=new FileReader("C://td//directorioPrueba//fichero2.txt");
+//			FileWriter fw=new FileWriter("C://td//directorioPrueba//fichero2.txt");
+//			FileReader fr=new FileReader("C://td//directorioPrueba//fichero2.txt");
+			FileWriter fw=new FileWriter("/Users/fira_dev/td_per/ws/td/directorioPrueba/fichero2.txt");
+			FileReader fr=new FileReader("/Users/fira_dev/td_per/ws/td/directorioPrueba/fichero2.txt");
 			//Escribimos en el fichero un String y un caracter 97 (a)
 			fw.write("Esto es una prueb");
 			fw.write(97);
@@ -92,8 +96,10 @@ public class EscrituraLectuarArchivos {
 		**/
 
 		try(
-				FileWriter fw=new FileWriter("C://td//directorioPrueba//fichero3.txt");
-				FileReader fr=new FileReader("C://td//directorioPrueba//fichero3.txt"))
+//				FileWriter fw=new FileWriter("C://td//directorioPrueba//fichero3.txt");
+//				FileReader fr=new FileReader("C://td//directorioPrueba//fichero3.txt"))
+		FileWriter fw=new FileWriter("/Users/fira_dev/td_per/ws/td/directorioPrueba/fichero3.txt");
+		FileReader fr=new FileReader("/Users/fira_dev/td_per/ws/td/directorioPrueba/fichero3.txt"))
 		{
 			//Escribimos en el fichero un String y un caracter 97 (a)
 			fw.write("Esto es una prueb_");
@@ -120,8 +126,11 @@ public class EscrituraLectuarArchivos {
 	{
 		
 		//El archivo debe de estar creado
-		try(BufferedReader br=new BufferedReader(new FileReader("C://td//directorioPrueba//fichero4.txt"));
-			BufferedWriter bw=new BufferedWriter(new FileWriter("C://td//directorioPrueba//fichero4.txt"));){
+//		try(BufferedReader br=new BufferedReader(new FileReader("C://td//directorioPrueba//fichero4.txt"));
+//			BufferedWriter bw=new BufferedWriter(new FileWriter("C://td//directorioPrueba//fichero4.txt"));){
+
+		try(BufferedReader br=new BufferedReader(new FileReader("/Users/fira_dev/td_per/ws/td/directorioPrueba/fichero4.txt"));
+			BufferedWriter bw=new BufferedWriter(new FileWriter("/Users/fira_dev/td_per/ws/td/directorioPrueba/fichero4.txt"));){
 			
 			//Escribimos en el fichero
 			bw.write("Esto es una prueba usando Buffered");
@@ -151,7 +160,8 @@ public class EscrituraLectuarArchivos {
 	private static void bufferReaderYWriter_V2() 
 	{
 		
-		File ficheroNuevo=new File("C://td//directorioPrueba//fichero5.txt");
+//		File ficheroNuevo=new File("C://td//directorioPrueba//fichero5.txt");
+		File ficheroNuevo=new File("/Users/fira_dev/td_per/ws/td/directorioPrueba/fichero5.txt");
 		
 		
 		if(!ficheroNuevo.exists())
