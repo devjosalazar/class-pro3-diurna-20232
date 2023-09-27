@@ -21,23 +21,24 @@ public class EjemplosBasicos {
 
 	public static void main(String[] args) {
 		//Archivos de propiedades
-//		archivoPropiedades();
+		//archivoPropiedades();
 
 		//Archivos de Registro
-//		archivoRegistro();
+		//archivoRegistro();
 
 		//Manejo de carpetas (directorios)
 //		manejoCarpetas();
 
 		//Creaci�n de archivos de texto
-		crearArchivo_V2_invocacionClasePersistencia();
+		//crearArchivo_V2_invocacionClasePersistencia();
 	}
 
 	private static void archivoPropiedades() {
 		ResourceBundle resourceBundle;
 
 		resourceBundle = ResourceBundle.getBundle("MiRecurso",new Locale("en","US"));
-		JOptionPane.showMessageDialog(null,resourceBundle.getString("usuario1"));
+		JOptionPane.showMessageDialog(null,resourceBundle.getString("promedioPro3"));
+
 
 		resourceBundle = ResourceBundle.getBundle("MiRecurso",new Locale("pt","BR"));
 		JOptionPane.showMessageDialog(null,resourceBundle.getString("saludoBienvenida"));

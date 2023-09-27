@@ -12,12 +12,12 @@ public class EscrituraLectuarArchivos {
 
 	public static void main(String[] args) {
 		
-//		fileReaderYWriter_V1();
+		fileReaderYWriter_V1();
 //		fileReaderYWriter_V2();
 //		fileReaderYWriter_V3();
 		
 //		bufferReaderYWriter_V1();
-		bufferReaderYWriter_V2();
+		//bufferReaderYWriter_V2();
 		
 	}
 

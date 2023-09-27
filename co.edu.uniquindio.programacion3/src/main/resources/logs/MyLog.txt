@@ -1,2 +1,6 @@
-Sep 25, 2023 8:52:03 AM co.edu.uniquindio.programacion3.flujosDatos.EjemplosBasicos archivoRegistro
+Sep 25, 2023 3:38:24 PM co.edu.uniquindio.programacion3.flujosDatos.EjemplosBasicos archivoRegistro
 SEVERE: Primer mensaje 1.1
+Sep 25, 2023 3:38:24 PM co.edu.uniquindio.programacion3.flujosDatos.EjemplosBasicos archivoRegistro
+WARNING: Segundo mensaje 2.1
+Sep 25, 2023 3:38:24 PM co.edu.uniquindio.programacion3.flujosDatos.EjemplosBasicos archivoRegistro
+SEVERE: Tercer mensaje 3.1
