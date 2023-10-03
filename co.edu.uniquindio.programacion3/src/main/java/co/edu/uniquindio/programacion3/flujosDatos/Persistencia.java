@@ -33,7 +33,9 @@ public class Persistencia {
 	}
 	
 	
-	public static void escribirArchivo(String rutaArchivo, ArrayList<String> texto,boolean adicionar) throws IOException 
+	public static void escribirArchivo(String rutaArchivo,
+									   ArrayList<String> texto,
+									   boolean adicionar) throws IOException
 	{
 		
 		FileWriter archivoSalida = null;

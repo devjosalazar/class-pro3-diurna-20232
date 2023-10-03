@@ -21,7 +21,7 @@ public class EjemplosBasicos {
 
 	public static void main(String[] args) {
 		//Archivos de propiedades
-		//archivoPropiedades();
+		archivoPropiedades();
 
 		//Archivos de Registro
 		//archivoRegistro();
@@ -45,6 +45,9 @@ public class EjemplosBasicos {
 
 		resourceBundle = ResourceBundle.getBundle("MiRecurso", new Locale("",""));
 		JOptionPane.showMessageDialog(null,resourceBundle.getString("saludoBienvenida"));
+
+		resourceBundle = ResourceBundle.getBundle("conexiones", new Locale("",""));
+		JOptionPane.showMessageDialog(null,resourceBundle.getString("usuario"));
 	}
 
 	private static void archivoRegistro() {

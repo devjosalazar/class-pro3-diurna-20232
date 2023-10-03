@@ -12,12 +12,12 @@ public class EscrituraLectuarArchivos {
 
 	public static void main(String[] args) {
 		
-		fileReaderYWriter_V1();
-//		fileReaderYWriter_V2();
-//		fileReaderYWriter_V3();
+		//fileReaderYWriter_V1();
+		//fileReaderYWriter_V2();
+		//fileReaderYWriter_V3();
 		
-//		bufferReaderYWriter_V1();
-		//bufferReaderYWriter_V2();
+		//bufferReaderYWriter_V1();
+		bufferReaderYWriter_V2();
 		
 	}
 
@@ -161,8 +161,8 @@ public class EscrituraLectuarArchivos {
 	{
 		
 //		File ficheroNuevo=new File("C://td//directorioPrueba//fichero5.txt");
-		File ficheroNuevo=new File("/Users/fira_dev/td_per/ws/td/directorioPrueba/fichero5.txt");
-		
+		File ficheroNuevo=new File("/Users/fira_dev/td_per/ws/td/directorioPrueba/autos.txt");
+		File ficheroNuevo2=new File("co.edu.uniquindio.programacion3/src/main/resources/autos.txt");
 		
 		if(!ficheroNuevo.exists())
 		{
@@ -176,12 +176,13 @@ public class EscrituraLectuarArchivos {
 		
 		//El archivo debe de estar creado
 		try(BufferedReader br=new BufferedReader(new FileReader(ficheroNuevo));
-			BufferedWriter bw=new BufferedWriter(new FileWriter(ficheroNuevo));){
+			BufferedWriter bw=new BufferedWriter(new FileWriter(ficheroNuevo));
+			BufferedWriter bw2=new BufferedWriter(new FileWriter(ficheroNuevo));){
 			
 			//Escribimos en el fichero
-			bw.write("Esto es una prueba usando Buffered");
+			bw.write("mazda;rojo;2023;4;200000; compra de auto a credito;109399393;23442");
 			bw.newLine();
-			bw.write("Seguimos usando Buffered");
+			//bw.write("Seguimos usando Buffered");
 			
 			//Guardamos los cambios del fichero
 			bw.flush();
