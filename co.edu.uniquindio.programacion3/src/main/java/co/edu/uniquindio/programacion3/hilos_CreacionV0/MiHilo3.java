@@ -20,7 +20,7 @@ public class MiHilo3 implements Runnable{
 		System.out.println(hilo.getName()+" iniciando.");
 		try {
 			for (int count=0; count<10;count++){
-				Thread.sleep(400);
+				Thread.sleep(4000);
 				System.out.println("En "+hilo.getName()+ ", el recuento es "+count);
 			}
 		}catch (InterruptedException exc){
